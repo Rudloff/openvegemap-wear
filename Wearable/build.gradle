@@ -8,7 +8,7 @@ android {
         applicationId "pro.rudloff.openvegemap"
         minSdkVersion 23
         targetSdkVersion 26
-        versionCode 402
+        versionCode 4022
         versionName "0.4.2"
     }
     buildTypes {
