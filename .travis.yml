@@ -1,0 +1,4 @@
+---
+language: android
+components:
+    - android-26
