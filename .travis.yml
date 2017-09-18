@@ -1,4 +1,5 @@
 ---
 language: android
-components:
-    - android-26
+android:
+    components:
+        - android-26
