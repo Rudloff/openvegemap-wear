@@ -57,7 +57,7 @@ public class MainActivity extends WearableActivity implements OnInfoWindowClickL
         }
         mMap.setOnInfoWindowClickListener(this);
 
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(48.583692, 7.748794), 16));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(48.85661, 2.351499), 15));
 
         try {
             GeoJsonLayer layer = new GeoJsonLayer(mMap, R.raw.poi, getApplicationContext());
