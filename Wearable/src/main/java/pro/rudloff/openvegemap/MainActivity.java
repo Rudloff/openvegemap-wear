@@ -9,6 +9,8 @@ import android.os.Bundle;
 import android.support.wearable.activity.WearableActivity;
 import android.net.Uri;
 import android.content.Intent;
+import android.Manifest;
+import android.content.pm.PackageManager;
 
 import java.io.IOException;
 import org.json.JSONException;
@@ -51,7 +53,7 @@ public class MainActivity extends WearableActivity implements OnInfoWindowClickL
         try {
             mMap.setMyLocationEnabled(true);
         } catch (SecurityException error) {
-
+            requestPermissions(new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 1);
         }
         mMap.setOnInfoWindowClickListener(this);
 
@@ -92,6 +94,13 @@ public class MainActivity extends WearableActivity implements OnInfoWindowClickL
 
         } catch (JSONException error) {
 
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+        if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+           mMap.setMyLocationEnabled(true);
         }
     }
 
