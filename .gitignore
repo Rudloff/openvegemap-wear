@@ -2,3 +2,5 @@ node_modules/
 build/
 .gradle/
 local.properties
+tmp/
+Wearable/src/main/res/raw/poi.json
