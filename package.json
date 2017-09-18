@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "osmtogeojson": "~2.2.12"
+  },
+  "repository": "https://github.com/Rudloff/openvegemap-wear.git",
+  "license": "GPL-3.0",
+  "scripts": {
+    "geojson": "mkdir -p tmp; curl 'https://overpass-api.de/api/interpreter?data=node\\[~%22^diet:.*\\$%22~%22.%22\\];out;' > tmp/overpass.osm; osmtogeojson tmp/overpass.osm > Wearable/src/main/res/raw/poi.json"
+  }
+}
