@@ -3,3 +3,9 @@ language: android
 android:
     components:
         - android-26
+        - build-tools-26.0.1
+
+before_install:
+    - nvm install 6
+    - npm install
+    - npm run geojson
