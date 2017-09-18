@@ -100,7 +100,11 @@ public class MainActivity extends WearableActivity implements OnInfoWindowClickL
     @Override
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
         if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-           mMap.setMyLocationEnabled(true);
+            try {
+                mMap.setMyLocationEnabled(true);
+            } catch (SecurityException error) {
+
+            }
         }
     }
 
